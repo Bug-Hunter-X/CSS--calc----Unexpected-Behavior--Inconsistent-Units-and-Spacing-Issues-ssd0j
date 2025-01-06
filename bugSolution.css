@@ -1,0 +1,11 @@
+To fix the `calc()` function issue, ensure all values within the calculation have consistent units. Also, always include spaces around the operators for better browser compatibility.
+
+Here's the corrected code:
+
+```css
+.element { width: calc(50% + 10px); /* Incorrect - inconsistent units */ }
+.element { width: calc(50vw + 10px); /* Correct - consistent units using vw */ }
+.element { width: calc(50% + 10px); /* Incorrect - missing spaces */ }
+.element { width: calc( 50% + 10px ); /* Correct - spaces added */ }
+```
+The corrected code ensures that the units (e.g., `vw`, `vh`, `px`, `em`) are consistent within the calculation and includes appropriate spacing around the operators.  This guarantees that the `calc()` function produces the expected result across different browsers.
