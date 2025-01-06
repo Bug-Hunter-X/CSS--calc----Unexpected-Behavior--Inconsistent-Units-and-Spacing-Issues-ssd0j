@@ -1,0 +1,9 @@
+The CSS property `calc()` is used to perform calculations, but it can lead to unexpected results if not used correctly. For example, the following code will not work as expected because the units are not consistent:
+
+```css
+.element { width: calc(50% + 10px); }
+```
+
+This is because `50%` is a percentage, while `10px` is a pixel value.  The browser won't know how to add them.  To fix it, ensure units are consistent across the calculation. 
+
+Another issue is that spaces around the operators within `calc()` are sometimes required and sometimes not (depending on the browser).  To avoid this issue, always include spaces around the operators.
